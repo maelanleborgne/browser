@@ -16,6 +16,9 @@ use Facebook\WebDriver\Interactions\Internal\WebDriverCoordinates;
 use Facebook\WebDriver\Internal\WebDriverLocatable;
 use Facebook\WebDriver\WebDriverElement;
 use Facebook\WebDriver\WebDriverSelect;
+use Symfony\Component\BrowserKit\AbstractBrowser;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Panther\Client;
 use Symfony\Component\Panther\DomCrawler\Crawler;
 use Symfony\Component\Panther\DomCrawler\Field\ChoiceFormField;
@@ -46,6 +49,7 @@ final class PantherSession extends Session
 {
     public function __construct(Client $client)
     {
+        /** @var AbstractBrowser<Request, Response> $client */
         parent::__construct($client);
     }
 

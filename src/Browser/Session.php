@@ -12,8 +12,8 @@
 namespace Zenstruck\Browser;
 
 use Symfony\Component\BrowserKit\AbstractBrowser;
-use Symfony\Component\BrowserKit\Request;
-use Symfony\Component\BrowserKit\Response;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Zenstruck\Dom;
 use Zenstruck\Dom\Session as DomSession;
 
